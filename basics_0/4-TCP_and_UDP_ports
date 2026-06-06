@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
-# Displays listening TCP/UDP ports with PID and program name
+# 4-TCP_and_UDP_ports - Dinlənən portları PID və proqram adı ilə göstərir
 
-netstat -tulnp
+if command -v netstat &> /dev/null; then
+    netstat -lpn 2>/dev/null
+else
+    ss -lpn 2>/dev/null
+fi
