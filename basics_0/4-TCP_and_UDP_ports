@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-netstat -tulnp
+# Displays all listening sockets
+
+netstat -lpn 2>/dev/null
